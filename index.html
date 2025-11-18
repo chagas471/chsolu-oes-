@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Destrave no Mercado Digital — Oferta Especial</title>
+
 <style>
 body {font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f3f4f6; color: #111;}
 header {background: linear-gradient(135deg,#0f172a,#1e293b); padding: 60px 20px; text-align: center; color: #fff;}
@@ -21,23 +22,34 @@ ul{padding-left:20px;font-size:18px;}
 .qr{text-align:center; margin-top:20px;}
 .whatsapp {background:#25D366; padding:14px 20px; border-radius:10px; color:white; text-decoration:none; font-weight:700; display:inline-flex; align-items:center; gap:8px;}
 
-/* novo estilo do botão copiar chave */
+/* Botão copiar PIX */
 .copy-btn {
-  background:#0ea5e9;
-  color:#fff;
-  padding:12px 20px;
+  background:#15803d;
+  color:white;
+  padding:14px 20px;
   border-radius:10px;
   font-size:18px;
   font-weight:700;
-  border:none;
   cursor:pointer;
-  margin-top:14px;
+  border:none;
+  margin-top:10px;
+  display:inline-block;
 }
 .copy-btn:hover {opacity:.9;}
 </style>
-</head>
-<body>
 
+<script>
+// Função para copiar chave PIX
+function copiarPIX() {
+    const chave = "44fa5d22-0947-413d-af57-e0b7386f26db";
+    navigator.clipboard.writeText(chave).then(() => {
+        alert("Chave PIX copiada com sucesso!");
+    });
+}
+</script>
+</head>
+
+<body>
 <header>
 <div style="background:#f59e0b;color:#111;padding:10px 20px;font-size:22px;font-weight:800;text-transform:uppercase;">🔥 Oferta Especial de Black Friday — Apenas R$ 1,99!</div>
 <h1>Destrave no Mercado Digital</h1>
@@ -63,7 +75,7 @@ ul{padding-left:20px;font-size:18px;}
 </ul>
 <p style="font-size:20px;margin-top:14px"><strong>Por R$ 1,99 você está comprando acesso a um conhecimento capaz de gerar suas primeiras vendas ainda este mês.</strong></p>
 <img class="image" src="https://images.unsplash.com/photo-1553729459-efe14ef6055d" />
-<p style="margin-top:20px; text-align:center;">
+<p style="text-align:center;margin-top:20px;">
 <a href="#pix" class="btn">QUERO LIBERAR MEU ACESSO POR R$ 1,99</a>
 </p>
 </div>
@@ -82,20 +94,23 @@ ul{padding-left:20px;font-size:18px;}
 
 <div class="card" id="pix">
 <h2 class="section-title">📲 Pagamento via PIX — Rápido e Seguro</h2>
+<p>Pague <strong>somente R$ 1,99</strong> usando a chave PIX abaixo.</p>
 
-<p style="font-size:20px;font-weight:700;text-align:center;">Clique abaixo para pagar:</p>
-<p style="text-align:center; margin-bottom:20px;">
-<a href="pix://44fa5d22-0947-413d-af57-e0b7386f26db" class="btn" style="background:#15803d;color:#fff;">💸 PAGAR VIA PIX (R$ 1,99)</a>
-</p>
-
-<!-- BOTÃO DE COPIAR A CHAVE -->
 <div class="qr">
-<button class="copy-btn" onclick="copyPix()">📋 COPIAR CHAVE PIX</button>
+<p style="font-size:20px;font-weight:700;margin-bottom:12px;">Clique no botão para copiar a chave PIX:</p>
+
+<button class="copy-btn" onclick="copiarPIX()">📋 COPIAR CHAVE PIX</button>
+
+<p style="margin-top:14px;font-size:15px;color:#555;">
+(use a opção “PIX Copia e Cola” no seu banco)
+</p>
 </div>
 
 <p style="text-align:center;margin-top:18px;">
 <a href="https://wa.me/5519997166192?text=Olá,+acabei+de+pagar+o+eBook+Destrave+no+Mercado+Digital" target="_blank" class="whatsapp">Enviar Comprovante no WhatsApp</a>
 </p>
+
+<p style="text-align:center;margin-top:10px;font-size:15px;">Após o pagamento, envie o comprovante para <strong>(19) 99716-6192</strong> para liberar seu eBook imediatamente.</p>
 </div>
 
 <div class="card">
@@ -122,15 +137,5 @@ ul{padding-left:20px;font-size:18px;}
 </footer>
 
 </div>
-
-<script>
-function copyPix() {
-  const chave = "44fa5d22-0947-413d-af57-e0b7386f26db";
-  navigator.clipboard.writeText(chave).then(() => {
-    alert("Chave PIX copiada!");
-  });
-}
-</script>
-
 </body>
 </html>
